@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BC307F182E19294100BFAAD7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC307EF92E1928F800BFAAD7 /* WidgetKit.framework */; };
+		BC307F192E19294100BFAAD7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC307EFB2E1928F800BFAAD7 /* SwiftUI.framework */; };
+		BC307F282E19294200BFAAD7 /* KanbanWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BC307F172E19294100BFAAD7 /* KanbanWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BC307EC72E1923CE00BFAAD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +27,48 @@
 			remoteGlobalIDString = BC307EB82E1923CC00BFAAD7;
 			remoteInfo = Kanban;
 		};
+		BC307F262E19294200BFAAD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC307EB12E1923CC00BFAAD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC307F162E19294100BFAAD7;
+			remoteInfo = KanbanWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC307F122E1928FA00BFAAD7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BC307F282E19294200BFAAD7 /* KanbanWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BC307EB92E1923CC00BFAAD7 /* Kanban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kanban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC307EC62E1923CE00BFAAD7 /* KanbanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanbanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC307ED02E1923CE00BFAAD7 /* KanbanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanbanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC307EF92E1928F800BFAAD7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BC307EFB2E1928F800BFAAD7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BC307F172E19294100BFAAD7 /* KanbanWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KanbanWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC307F2D2E19294900BFAAD7 /* KanbanWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KanbanWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BC307F292E19294200BFAAD7 /* Exceptions for "KanbanWidget" folder in "KanbanWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BC307F162E19294100BFAAD7 /* KanbanWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BC307EBB2E1923CC00BFAAD7 /* Kanban */ = {
@@ -43,6 +84,14 @@
 		BC307ED32E1923CE00BFAAD7 /* KanbanUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = KanbanUITests;
+			sourceTree = "<group>";
+		};
+		BC307F1A2E19294100BFAAD7 /* KanbanWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BC307F292E19294200BFAAD7 /* Exceptions for "KanbanWidget" folder in "KanbanWidgetExtension" target */,
+			);
+			path = KanbanWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,15 +118,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC307F142E19294100BFAAD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC307F192E19294100BFAAD7 /* SwiftUI.framework in Frameworks */,
+				BC307F182E19294100BFAAD7 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BC307EB02E1923CC00BFAAD7 = {
 			isa = PBXGroup;
 			children = (
+				BC307F2D2E19294900BFAAD7 /* KanbanWidgetExtension.entitlements */,
 				BC307EBB2E1923CC00BFAAD7 /* Kanban */,
 				BC307EC92E1923CE00BFAAD7 /* KanbanTests */,
 				BC307ED32E1923CE00BFAAD7 /* KanbanUITests */,
+				BC307F1A2E19294100BFAAD7 /* KanbanWidget */,
+				BC307EF82E1928F800BFAAD7 /* Frameworks */,
 				BC307EBA2E1923CC00BFAAD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +149,18 @@
 				BC307EB92E1923CC00BFAAD7 /* Kanban.app */,
 				BC307EC62E1923CE00BFAAD7 /* KanbanTests.xctest */,
 				BC307ED02E1923CE00BFAAD7 /* KanbanUITests.xctest */,
+				BC307F172E19294100BFAAD7 /* KanbanWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BC307EF82E1928F800BFAAD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC307EF92E1928F800BFAAD7 /* WidgetKit.framework */,
+				BC307EFB2E1928F800BFAAD7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +173,12 @@
 				BC307EB52E1923CC00BFAAD7 /* Sources */,
 				BC307EB62E1923CC00BFAAD7 /* Frameworks */,
 				BC307EB72E1923CC00BFAAD7 /* Resources */,
+				BC307F122E1928FA00BFAAD7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BC307F272E19294200BFAAD7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BC307EBB2E1923CC00BFAAD7 /* Kanban */,
@@ -163,6 +236,28 @@
 			productReference = BC307ED02E1923CE00BFAAD7 /* KanbanUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BC307F162E19294100BFAAD7 /* KanbanWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC307F2A2E19294200BFAAD7 /* Build configuration list for PBXNativeTarget "KanbanWidgetExtension" */;
+			buildPhases = (
+				BC307F132E19294100BFAAD7 /* Sources */,
+				BC307F142E19294100BFAAD7 /* Frameworks */,
+				BC307F152E19294100BFAAD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BC307F1A2E19294100BFAAD7 /* KanbanWidget */,
+			);
+			name = KanbanWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = KanbanWidgetExtension;
+			productReference = BC307F172E19294100BFAAD7 /* KanbanWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +279,9 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = BC307EB82E1923CC00BFAAD7;
 					};
+					BC307F162E19294100BFAAD7 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = BC307EB42E1923CC00BFAAD7 /* Build configuration list for PBXProject "Kanban" */;
@@ -203,6 +301,7 @@
 				BC307EB82E1923CC00BFAAD7 /* Kanban */,
 				BC307EC52E1923CE00BFAAD7 /* KanbanTests */,
 				BC307ECF2E1923CE00BFAAD7 /* KanbanUITests */,
+				BC307F162E19294100BFAAD7 /* KanbanWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +322,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BC307ECE2E1923CE00BFAAD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC307F152E19294100BFAAD7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +359,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC307F132E19294100BFAAD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +378,11 @@
 			isa = PBXTargetDependency;
 			target = BC307EB82E1923CC00BFAAD7 /* Kanban */;
 			targetProxy = BC307ED12E1923CE00BFAAD7 /* PBXContainerItemProxy */;
+		};
+		BC307F272E19294200BFAAD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC307F162E19294100BFAAD7 /* KanbanWidgetExtension */;
+			targetProxy = BC307F262E19294200BFAAD7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,10 +511,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kanban/Kanban.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4M6PSUH765;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSRemindersUsageDescription = "This app needs access to Reminders to sync your Kanban tasks with Apple Reminders.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,10 +541,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kanban/Kanban.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4M6PSUH765;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSRemindersUsageDescription = "This app needs access to Reminders to sync your Kanban tasks with Apple Reminders.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -510,6 +634,62 @@
 			};
 			name = Release;
 		};
+		BC307F2B2E19294200BFAAD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = KanbanWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4M6PSUH765;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KanbanWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KanbanWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yosys.Kanban.KanbanWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC307F2C2E19294200BFAAD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = KanbanWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4M6PSUH765;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KanbanWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KanbanWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yosys.Kanban.KanbanWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -545,6 +725,15 @@
 			buildConfigurations = (
 				BC307EE12E1923CE00BFAAD7 /* Debug */,
 				BC307EE22E1923CE00BFAAD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC307F2A2E19294200BFAAD7 /* Build configuration list for PBXNativeTarget "KanbanWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC307F2B2E19294200BFAAD7 /* Debug */,
+				BC307F2C2E19294200BFAAD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
